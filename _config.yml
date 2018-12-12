@@ -6,3 +6,4 @@ favicon: assets/images/myicon.png
 
 plugins:
   - jekyll-sitemap
+  - jekyll-seo-tag
