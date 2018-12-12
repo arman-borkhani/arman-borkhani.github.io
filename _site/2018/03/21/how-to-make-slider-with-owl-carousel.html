@@ -1,0 +1,196 @@
+<!doctype html>
+<html dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<assets/images/myicon.png" title="Favicon" />
+    <title>ساخت اسلایدر با استفاده از پلاگین Owl Carousel</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href=/assets/css/prism.css>
+    <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" 
+    integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" 
+    crossorigin="anonymous"></script>
+  </head>
+  <body>
+      
+<header class="header">
+    <nav class="top-navbar">
+    <ul class="menu-header">
+      
+        <li><a href="/">
+        صفحه اصلی
+        </a></li>
+      
+        <li><a href="/about.html">
+        تماس با من
+        </a></li>
+      
+    </ul>
+    </nav>
+         <ul class="social-logo-list">
+            <li>
+                <a href="https://github.com/arman-borkhani" class="social-icon"><i class="fab fa-github" ></i></a>
+            </li>
+            <li>
+                <a href="https://twitter.com/arman_d_b" class="social-icon"><i class="fab fa-twitter"></i></a>
+            </li>
+        </ul>
+    
+</header>
+    <div class="container">
+    <article class="article">
+    <header>
+        <h1>
+            ساخت اسلایدر با استفاده از پلاگین Owl Carousel
+        </h1>
+    <div class="post-info">
+        <ul>
+            <li><i class="far fa-user"></i><span>آرمان بورخانی</span></li>
+            <li><i class="far fa-clock"></i><span>21 Mar 2018</span></li>
+        </ul>
+    </div>
+    </header>
+    <div class="article">
+        <p>ساخت اسلایدر برای افرادی که دانشی در مورد جاوا اسکریپ و جی کوئری ندارند می تونه سخت باشه ، توسعه دهنده هایی که دانش کافی دارند هم ممکنه به دلیل کمبود وقت و یا دلایل دیگه قادر نباشن یک اسکریپت کامل و انعطاف پذیر برای اسلایدر بنویسند.
+در چنین شرایطی راه حل پیش رو استفاده از پلاگین های آماده است. در این نوشتار یکی از این پلاگین ها به نام Owl Carousel معرفی میشه.</p>
+
+<p>اسلایدری که در تصویر زیر می بینید با استفاده از این پلاگین ساخته شده.
+<img src="/assets/images/owl-carousel.gif" alt="اسلایدر آماده owl carousel" class="full-width" /></p>
+
+<p>معمولا اسلایدرها با استفاده از جاوا اسکریپت یا جی کوئری (jQuery) که یک کتابخانه جاوا اسکریپتی است ساخته می شوند؛ البته این امکان هم وجود داره که فقط با CSS و بدون استفاده از جاوا اسکریپت یا جی کوئری یک اسلایدر بسازید.</p>
+
+<h2 id="ویژگی-های-پلاگین">ویژگی های پلاگین</h2>
+
+<p>– با استفاده از جی کوئری نوشته شده و رایگانه</p>
+
+<p>– از قابلیت لمس (touch) پشتیبانی می کنه بنابراین کاربرانی که از دستگاه های لمسی استفاده می کنند به راحتی قادر خواهند بود با اسلایدر کار کنند.</p>
+
+<p>– بیش از ۶۰ گزینه (option) وجود داره که با انتخاب هر کدوم می تونید تغییرات دلخواهتون را اعمال کنید.</p>
+
+<p>– در مرورگر های قدیمی یا به تعبیر سازندگان این پلاگین “مرورگر های زامبی” بدون مشکل کار میکنه.</p>
+
+<p>– واکنشگرا یا ریسپانسیو هست.</p>
+
+<p>– از راست به چپ بودن (RTL) پشتیبانی می کنه.</p>
+
+<p>مزایای دیگری هم برای این پلاگین ذکر شده اما فکر می کنم همینقدر برای آشنایی کافی باشه.</p>
+
+<h2 id="نصب-و-راه-اندازی">نصب و راه اندازی</h2>
+
+<p>پلاگین را از صفحه اصلی سایت دانلود کنید؛ فایلی که دانلود کردید یه پوشه به نام dist داره که ساختار و محتواش به شکل زیر است.</p>
+
+<pre><code>owlcarousel/
+├── assets/
+│   ├── owl.carousel.css
+│   ├── owl.carousel.min.css
+│   ├── owl.theme.default.css
+│   ├── owl.theme.default.min.css
+│   ├── owl.theme.green.css
+│   ├── owl.theme.green.min.css
+│   └── owl.video.play.png
+│
+├── owl.carousel.js
+├── owl.carousel.min.js
+├── LICENSE-MIT
+└── README.md
+</code></pre>
+
+<p>ابتدا باید فایل های owl.carousel.min.css و owl.theme.default.min.css را به سندتون اضافه کنید.</p>
+
+<pre><code class="language-markup">&lt;link rel="stylesheet" href="owlcarousel/owl.carousel.min.css"&gt;
+&lt;link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css"&gt;
+</code></pre>
+
+<p>چون این پلاگین با جی کوئری نوشته شده باید کتابخانه جی کوئری را به سندتون اضافه کنید؛ آخرین نسخه جی کوئری را می تونید از <a href="https://jquery.com/">وبسایتش</a> دانلود کنید یا مسیر زیر را در فایلی که دانلود کردید دنبال کنید.</p>
+
+<pre><code>docs/assets/vendors
+</code></pre>
+
+<p>همچنین فایل owl.carousel.min.js که اصلی ترین فایل به حساب میاد هم باید به سند اضافه بشه.</p>
+
+<pre><code class="language-markup">&lt;script src="jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="owlcarousel/owl.carousel.min.js"&gt;&lt;/script&gt;
+</code></pre>
+<p>بهتره تگ های script بالا را در انتهای تگ body قرار بدید.</p>
+
+<p>ساختار کلی تگ های html باید به شکل زیر باشه؛ بین تگ های div شما می تونید هر نوع تگ یا محتوایی قرار بدید.</p>
+
+<pre><code class="language-markup">&lt;div class="owl-carousel owl-theme"&gt;
+  &lt;div&gt; Your Content &lt;/div&gt;
+  &lt;div&gt; Your Content &lt;/div&gt;
+  &lt;div&gt; Your Content &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>در آخر برای فراخوانی پلاگین کدهای زیر را بعد از تگ های script اضافه کنید.</p>
+
+<pre><code class="language-markup">&lt;script&gt;
+ $(".owl-carousel").owlCarousel({
+    autoplay:true,
+    items:1,
+    loop:true,
+    }
+ );
+&lt;/script&gt;
+</code></pre>
+
+<p>اگر خاصیت dir تگ html سند بصورت rtl مقدار دهی شده باید دستور rtl:true را بعد از متغییر loop اضافه کنید.</p>
+
+<p>items تعداد اسلایدها یا آیتم ها را نشون میده.</p>
+
+<p>متغییر autoplay تعیین می کنه که آیتم ها یا اسلایدها بصورت اتوماتیک جابه جا بشن یا نه.این متغییر از نوع Boolean هست؛ یعنی مقدارش میتونه true (صحیح) یا false (غلط) باشه.</p>
+
+<p>دستور loop:true باعث ایجاد حلقه بی نهایت میشه؛ یعنی بعد از رسیدن به آخرین آیتم دوباره آیتم ها از اول نمایش داده می شوند.</p>
+
+<p>با استفاده از کدهای بالا و اضافه کردن تصویر باید یک اسلایدر بشکل زیر داشته باشید.</p>
+
+<p><img src="/assets/images/owl-carousel-default.gif" alt="اسلایدر پیش فرض owl carousel" class="full-width" /></p>
+
+<h2 id="گزینه-ها-و-تنظیمات-پلاگین">گزینه ها و تنظیمات پلاگین</h2>
+<p>همونطور که بالاتر توضیح داده شد یکسری متغییر برای این پلاگین تعریف شده که با مقداردهی مناسب می تونید به راحتی تنظیمات دلخواه را روی اسلایدر اعمال کنید.</p>
+
+<p>در ادامه برخی از این متغییر را معرفی می شوند، لیست کامل متغییرها را هم می تونید <a href="https://owlcarousel2.github.io/OwlCarousel2/docs/api-options.html">ایـنجـــــــــا</a> مشاهده کنید.</p>
+
+<h3 id="dots">dots</h3>
+
+<p>از نوع Boolean است و اگر مقدارش false باشه ، دایره هایی که زیر اسلایدر هستند مخفی میشن.</p>
+
+<h3 id="margin">margin</h3>
+
+<p>margin از راست آیتم هاست( در واقع فاصله بین آیتم ها ) و می تونید یک مقدار عددی بهش اختصاص بدید.</p>
+
+<h3 id="autoplayhoverpause">autoplayHoverPause</h3>
+
+<p>از نوع Boolean هست و زمانی که مقدارش true باشه با قرار گرفتن ماوس روی هر آیتم ، پخش خودکار (atuoplay) غیرفعال میشه.</p>
+
+<h3 id="autoplaytimeout">autoplayTimeout</h3>
+
+<p>از نوع عددی است و مشخص می کند در پخش خودکار بعد از چند میلی ثانیه آیتم ها جایگزین شوند.
+این متغییر بصورت پیش فرض مقدارش 5000 است، هر چه این مقدار کمتر باشه سرعت اسلایدر بیشتر میشه.</p>
+
+<h3 id="responsive">responsive</h3>
+
+<p>با مقدار دهی به این متغییر می تونید تعیین کنید در عرض های مختلف صفحه نمایش چه تغییراتی اعمال بشه.</p>
+
+<pre><code class="language-javascript">
+responsive : {
+ 0 : {
+    items:1,
+ },
+480 : {
+    items:3,
+ },
+768 : {
+    items:6,
+  }
+}
+</code></pre>
+
+<p>در مثال بالا تعداد آیتم های اسلایدر در نمایشگرهای با عرض 480px به بالا برابر با 3 خواهد بود و در عرض 768px به بالا 6 آیتم  نمایش داده می شود. به جای این دو عدد هر عددی که مایلید می تونید قرار بدید.</p>
+
+    </div>
+</article>
+    </div>
+    <script src=/assets/js/prism.js></script>
+  </body>
+</html>
