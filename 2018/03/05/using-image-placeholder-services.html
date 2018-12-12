@@ -1,0 +1,124 @@
+<!doctype html>
+<html dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<assets/images/myicon.png" title="Favicon" />
+    <title>استفاده از سرویس های image placeholder در پروژه های طراحی قالب</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href=/assets/css/prism.css>
+    <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" 
+    integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" 
+    crossorigin="anonymous"></script>
+  </head>
+  <body>
+      
+<header class="header">
+    <nav class="top-navbar">
+    <ul class="menu-header">
+      
+        <li><a href="/">
+        صفحه اصلی
+        </a></li>
+      
+        <li><a href="/about.html">
+        تماس با من
+        </a></li>
+      
+    </ul>
+    </nav>
+         <ul class="social-logo-list">
+            <li>
+                <a href="https://github.com/arman-borkhani" class="social-icon"><i class="fab fa-github" ></i></a>
+            </li>
+            <li>
+                <a href="https://twitter.com/arman_d_b" class="social-icon"><i class="fab fa-twitter"></i></a>
+            </li>
+        </ul>
+    
+</header>
+    <div class="container">
+    <article class="article">
+    <header>
+        <h1>
+            استفاده از سرویس های image placeholder در پروژه های طراحی قالب
+        </h1>
+    <div class="post-info">
+        <ul>
+            <li><i class="far fa-user"></i><span>آرمان بورخانی</span></li>
+            <li><i class="far fa-clock"></i><span>05 Mar 2018</span></li>
+        </ul>
+    </div>
+    </header>
+    <div class="article">
+        <p>تو اکثر پروژه ها از تصاویر استفاده میشه ، زمانی که دارید روی نسخه اولیه یا پیش نمایش یه قالب کار می کنید لازم دارید تصاویر با ابعاد مختلف را روی قالب امتحان کنید. برش دادن تصاویر با نرم افزار های مختلف برای بدست آوردن اندازه مناسب می تونه کار زمان بر و سختی باشه.با استفاده از سرویس های image placeholder می تونید بطور رایگان تصاویری با ابعاد دلخواهتون را در صفحه پروژه بارگذاری کنید. معمولا شما با قرار دادن یک url در خاصیت(Attribute) سورس(src) تگ img می تونید تصویر را در قالب نمایش بدید.</p>
+
+<h2 id="placeholdercom"><a href="https://placeholder.com/">placeholder.com</a></h2>
+
+<p><img src="/assets/images/Placeholder-com-Quick-Simple-Placeholder-Images.png" alt="سرویس های image placeholder" class="full-width" /></p>
+
+<p>برای اینکه بتونید از تصاویر این وبسایت استفاده کنید باید خاصیت سورس تگ img را شبیه کد زیر مقدار دهی کنید.</p>
+
+<pre><code class="language-markup">&lt;img src="http://via.placeholder.com/350x150"&gt;
+</code></pre>
+
+<p>با این کار یه تصویر با طول 350 و عرض 150 در صفحه نمایش داده میشه. شما به راحتی می تونید با تغییر دو عدد بعد از آدرس سایت اندازه تصویر را تغییر بدید.</p>
+
+<h2 id="placeholdco"><a href="https://placehold.co/">placehold.co</a></h2>
+
+<p>این سرویس هم شبیه سرویس قبلی با این تفاوت که شما می تونید رنگ پس زمینه و رنگ متن را تغییر بدید و یا متنی دلخواه را با اعداد روی تصویر جایگزین کنید.</p>
+
+<p>بصورت پیش فرض شما باید تگ img را به شکل زیر وارد پروژه کنید.</p>
+
+<pre><code class="language-markup">&lt;img src="https://placehold.co/600x400"&gt;
+</code></pre>
+
+<p>برای تعیین رنگ باید ابتدا رنگ پس زمینه و سپس رنگ متن را بصورت زیر مشخص کنید</p>
+
+<pre><code class="language-markup">&lt;img src="https://placehold.co/600x400/orange/white"&gt;
+</code></pre>
+<p>برای نمایش متن دلخواه روی تصویر بصورت زیر عمل کنید. علامت + نمایانگر فاصله است</p>
+
+<pre><code class="language-markup">&lt;img src="https://placehold.co/600x400?text=Hello+World"&gt;
+</code></pre>
+
+<h2 id="picsumphotos"><a href="http://picsum.photos/">picsum.photos</a></h2>
+
+<p><img src="/assets/images/Lorem-Picsum.png" alt="سرویس های image placeholder" class="full-width" /></p>
+
+<p>سرویس های قبلی یه تصویر ثابت برای شما نمایش می دهند. اما این سرویس یک تصویر از وبسایت unsplash که منبعی از تصاویر رایگانه برای شما بارگذاری می کنه.برای استفاده از این سرویس باید تگ img را بصورت زیر وارد سندتون کنید.</p>
+
+<pre><code class="language-markup">&lt;img src="https://picsum.photos/200/300"&gt;
+</code></pre>
+<p>اگر به انتهای url بالا مقدار random? را اضافه کنید با هر بار رفرش کردن صفحه، تصویر جدیدی با همون ابعاد جایگزین تصویر قبلی میشه.</p>
+
+<pre><code class="language-markup">&lt;img src="https://picsum.photos/200/300/?random"&gt;
+</code></pre>
+
+<p>اگه بخواهید چندتا تصویر به صفحه اضافه کنید بطوری که شبیه هم نباشن باید به هر تصویر یک شماره که id تصویر بشمار میاد اختصاص بدید؛ لیست تصاویر را می تونید در <a href="https://picsum.photos/images">ایـــــــــن</a> آدرس ببینید.</p>
+
+<pre><code class="language-markup">&lt;img src="https://picsum.photos/200/300?image=0"&gt;
+</code></pre>
+
+<p>همچنین مشخصات دیگری هم می تونید به تصاویر اضافه کنید مانند انتخاب تصاویر سیاه و سفید با اضافه کردن g/ بعد از آدرس سایت.</p>
+
+<pre><code class="language-markup">&lt;img src="https://picsum.photos/g/200/300"&gt;
+</code></pre>
+
+<h2 id="placeimgcom"><a href="http://placeimg.com/">placeimg.com</a></h2>
+
+<p>با استفاده از کد زیر شما می تونید از این سرویس استفاده کنید. با هر بار رفرش کردن صفحه تصویر جدیدی جایگزین قبلی میشه.</p>
+
+<pre><code class="language-markup">&lt;img src="https://placeimg.com/640/480/any"&gt;
+</code></pre>
+
+<p>درضمن شما می تونید با وارد کردن اندازه های دلخواه و انتخاب کردن یکی از دسته های حیوانات ، معماری ، طبیعت ، جمعیت و تکنولوژی تصویری دانلود کنید و ازش استفاده کنید.</p>
+
+<p>سرویس های زیادی از این دست وجود دارند، برای پیدا کردن موارد دیگر عبارت image placeholder را جستجو کنید.</p>
+
+    </div>
+</article>
+    </div>
+    <script src=/assets/js/prism.js></script>
+  </body>
+</html>
