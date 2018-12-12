@@ -1,9 +1,13 @@
+url: http://armanb.ir
 markdown: kramdown
 kramdown:
    syntax_highlighter_opts:
       disable : true
 favicon: assets/images/myicon.png
-
+repository: arman-borkhani/arman-borkhani.github.io
+github:
+  username: arman-borkhani
+repository: arman-borkhani.github.io
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
