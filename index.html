@@ -1,0 +1,20 @@
+---
+layout: default
+title: آرمان بورخانی
+
+---
+{% for post in site.posts %}
+<article>
+    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    <div class="post-info">
+        <ul>
+            <li><i class="far fa-user"></i><span>{{ post.author }}</span></li>
+            <li><i class="far fa-clock"></i><span>{{ post.date | date_to_string }}</span></li>
+        </ul>
+    </div>
+    <div class="post-excerpt">
+        {{ post.excerpt }}
+    </div>
+    <div class="continue"><a href="{{ post.url }}">ادامه مطلب</a></div>
+</article>
+{% endfor %}

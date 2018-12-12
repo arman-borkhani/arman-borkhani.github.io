@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<article class="article">
+    <header>
+        <h1>
+            {{page.title}}
+        </h1>
+    <div class="post-info">
+        <ul>
+            <li><i class="far fa-user"></i><span>{{ page.author }}</span></li>
+            <li><i class="far fa-clock"></i><span>{{ page.date | date_to_string }}</span></li>
+        </ul>
+    </div>
+    </header>
+    <div class="article">
+        {{ content }}
+    </div>
+</article>

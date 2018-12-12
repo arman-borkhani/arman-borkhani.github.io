@@ -1,0 +1,4 @@
+- name: صفحه اصلی
+  link: /
+- name: تماس با من
+  link: /about.html
