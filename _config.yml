@@ -11,3 +11,4 @@ repository: arman-borkhani.github.io
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-jalali
