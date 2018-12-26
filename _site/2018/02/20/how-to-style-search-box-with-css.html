@@ -7,15 +7,14 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'UA-114610826-1');
     </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="/assets/images/myicon.png" title="Favicon" />
     <title>آموزش استایل دهی به فرم جستجو با استفاده از css</title>
+    <link rel="stylesheet" href=http://localhost:4000/assets/css/prism.css>
     <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href=http://armanb.ir/assets/css/prism.css>
     <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" 
     integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" 
     crossorigin="anonymous"></script>
@@ -27,56 +26,52 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="ساخت یک فرم جستجو یا باکس جستجو شاید خیلی ساده به نظر برسه اما نکاتی در خودش داره که میتونه کاربردی باشه. در انتها شما یاد می گیرید چطور باکس بالا را با کمک css بسازید. مرحله به مرحله توضیحاتی که لازم باشه را میدم با این حال سعی می کنم خیلی طولانی نشه؛ اگه به توضیحات اضافه نیاز ندارید می تونید کد های کامل شده را در آخر این نوشتار ببینید." />
 <meta property="og:description" content="ساخت یک فرم جستجو یا باکس جستجو شاید خیلی ساده به نظر برسه اما نکاتی در خودش داره که میتونه کاربردی باشه. در انتها شما یاد می گیرید چطور باکس بالا را با کمک css بسازید. مرحله به مرحله توضیحاتی که لازم باشه را میدم با این حال سعی می کنم خیلی طولانی نشه؛ اگه به توضیحات اضافه نیاز ندارید می تونید کد های کامل شده را در آخر این نوشتار ببینید." />
-<link rel="canonical" href="http://armanb.ir/2018/02/20/how-to-style-search-box-with-css.html" />
-<meta property="og:url" content="http://armanb.ir/2018/02/20/how-to-style-search-box-with-css.html" />
+<link rel="canonical" href="http://localhost:4000/2018/02/20/how-to-style-search-box-with-css.html" />
+<meta property="og:url" content="http://localhost:4000/2018/02/20/how-to-style-search-box-with-css.html" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-02-20T00:00:00+03:30" />
 <script type="application/ld+json">
-{"mainEntityOfPage":{"@type":"WebPage","@id":"http://armanb.ir/2018/02/20/how-to-style-search-box-with-css.html"},"url":"http://armanb.ir/2018/02/20/how-to-style-search-box-with-css.html","author":{"@type":"Person","name":"آرمان بورخانی"},"description":"ساخت یک فرم جستجو یا باکس جستجو شاید خیلی ساده به نظر برسه اما نکاتی در خودش داره که میتونه کاربردی باشه. در انتها شما یاد می گیرید چطور باکس بالا را با کمک css بسازید. مرحله به مرحله توضیحاتی که لازم باشه را میدم با این حال سعی می کنم خیلی طولانی نشه؛ اگه به توضیحات اضافه نیاز ندارید می تونید کد های کامل شده را در آخر این نوشتار ببینید.","headline":"آموزش استایل دهی به فرم جستجو با استفاده از css","dateModified":"2018-02-20T00:00:00+03:30","@type":"BlogPosting","datePublished":"2018-02-20T00:00:00+03:30","@context":"http://schema.org"}</script>
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2018/02/20/how-to-style-search-box-with-css.html"},"url":"http://localhost:4000/2018/02/20/how-to-style-search-box-with-css.html","author":{"@type":"Person","name":"آرمان بورخانی"},"description":"ساخت یک فرم جستجو یا باکس جستجو شاید خیلی ساده به نظر برسه اما نکاتی در خودش داره که میتونه کاربردی باشه. در انتها شما یاد می گیرید چطور باکس بالا را با کمک css بسازید. مرحله به مرحله توضیحاتی که لازم باشه را میدم با این حال سعی می کنم خیلی طولانی نشه؛ اگه به توضیحات اضافه نیاز ندارید می تونید کد های کامل شده را در آخر این نوشتار ببینید.","headline":"آموزش استایل دهی به فرم جستجو با استفاده از css","dateModified":"2018-02-20T00:00:00+03:30","@type":"BlogPosting","datePublished":"2018-02-20T00:00:00+03:30","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
   <body>
       
 <header class="header">
-    <nav class="top-navbar">
-    <ul class="menu-header">
-      
-        <li><a href="/">
-        صفحه اصلی
-        </a></li>
-      
-        <li><a href="/contact.html">
-        تماس با من
-        </a></li>
-      
-    </ul>
-    </nav>
-         <ul class="social-logo-list">
-            <li>
-                <a href="https://github.com/arman-borkhani" class="social-icon"><i class="fab fa-github" ></i></a>
-            </li>
-            <li>
-                <a href="https://twitter.com/arman_d_b" class="social-icon"><i class="fab fa-twitter"></i></a>
-            </li>
-        </ul>
-    
+  <a href="/">
+    <img src="/assets/images/main-icon.png" class="main-icon" alt="armanb.ir">
+  </a>
+  <h1 class="main-heading" >
+    من یک توسعه دهنده سمت کاربر وب هستم و درمورد تجربیاتم می نویسم
+  </h1>
 </header>
-    <div class="container">
-    <article class="article">
-    <header>
-        <h1>
-            آموزش استایل دهی به فرم جستجو با استفاده از css
-        </h1>
-    <div class="post-info">
+    <div class="posts-wrapper">
+      <div class="container">
+  <article class="article">
+    <header>  
+      <h1>
+      آموزش استایل دهی به فرم جستجو با استفاده از css
+      </h1>
+      <div class="post-info">
         <ul>
-            <li><i class="far fa-user"></i><span>آرمان بورخانی</span></li>
-            <li><i class="far fa-clock"></i><span>01 اسفند 1396</span></li>
+          <li>
+            <i class="far fa-calendar-alt"></i>
+            <span>01 اسفند 1396</span>
+          </li>
+          <li>
+            <i class="far fa-clock"></i>
+            <span>
+              
+              
+              4 دقیقه مطالعه
+              
+            </span>
+          </li>
         </ul>
-    </div>
+      </div>
     </header>
-    <div class="article">
-        <p><img src="/assets/images/Screenshot-2018-2-21-search-box2.png" alt="search-box" class="full-width" />
+    <div class="article-content">
+      <p><img src="/assets/images/Screenshot-2018-2-21-search-box2.png" alt="search-box" class="full-width" />
 ساخت یک فرم جستجو یا باکس جستجو شاید خیلی ساده به نظر برسه اما نکاتی در خودش داره که میتونه کاربردی باشه. در انتها شما یاد می گیرید چطور باکس بالا را با کمک css بسازید. مرحله به مرحله توضیحاتی که لازم باشه را میدم با این حال سعی می کنم خیلی طولانی نشه؛ اگه به توضیحات اضافه نیاز ندارید می تونید کد های کامل شده را در آخر این نوشتار ببینید.</p>
 
 <p>تگ های html مورد نیاز را وارد صفحه کنید.</p>
@@ -185,8 +180,21 @@ font-weight: bold;
 </code></pre>
 
     </div>
-</article>
+    </article>
+</div>
     </div>
-    <script src=http://armanb.ir/assets/js/prism.js></script>
+     <footer class="footer">
+  <p class="my-3">برای تماس با من از ایمیل زیر استفاده کنید</p>
+  <p class="my-3">armanborkhani@gmail.com</p>
+  <ul class="social-logo-list my-3">
+    <li>
+      <a href="https://github.com/arman-borkhani" class="social-icon"><i class="fab fa-github" ></i></a>
+    </li>
+    <li>
+      <a href="https://twitter.com/arman_d_b" class="social-icon"><i class="fab fa-twitter"></i></a>
+    </li>
+  </ul>
+</footer>
+    <script src=http://localhost:4000/assets/js/prism.js></script>
   </body>
 </html>

@@ -1,21 +1,9 @@
 
 <header class="header">
-    <nav class="top-navbar">
-    <ul class="menu-header">
-      {% for item in site.data.navigation %}
-        <li><a href="{{ item.link }}">
-        {{ item.name }}
-        </a></li>
-      {% endfor %}
-    </ul>
-    </nav>
-         <ul class="social-logo-list">
-            <li>
-                <a href="https://github.com/arman-borkhani" class="social-icon"><i class="fab fa-github" ></i></a>
-            </li>
-            <li>
-                <a href="https://twitter.com/arman_d_b" class="social-icon"><i class="fab fa-twitter"></i></a>
-            </li>
-        </ul>
-    
+  <a href="/">
+    <img src="/assets/images/main-icon.png" class="main-icon" alt="armanb.ir">
+  </a>
+  <h1 class="main-heading" {% if page.url == "/" %}style="display: table;"{% endif %}>
+    من یک توسعه دهنده سمت کاربر وب هستم و درمورد تجربیاتم می نویسم
+  </h1>
 </header>

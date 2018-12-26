@@ -1,20 +1,34 @@
 ---
 layout: default
 ---
-
-<article class="article">
-    <header>
-        <h1>
-            {{page.title}}
-        </h1>
-    <div class="post-info">
+<div class="container">
+  <article class="article">
+    <header>  
+      <h1>
+      {{page.title}}
+      </h1>
+      <div class="post-info">
         <ul>
-            <li><i class="far fa-user"></i><span>{{ page.author }}</span></li>
-            <li><i class="far fa-clock"></i><span>{{ page.date | jdate: "%d %b %Y" }}</span></li>
+          <li>
+            <i class="far fa-calendar-alt"></i>
+            <span>{{ page.date | jdate: "%d %b %Y" }}</span>
+          </li>
+          <li>
+            <i class="far fa-clock"></i>
+            <span>
+              {% assign words = content | number_of_words %}
+              {% if words < 360 %}
+              1 دقیقه مطالعه
+              {% else %}
+              {{ words | divided_by:180 }} دقیقه مطالعه
+              {% endif %}
+            </span>
+          </li>
         </ul>
-    </div>
+      </div>
     </header>
-    <div class="article">
-        {{ content }}
+    <div class="article-content">
+      {{ content }}
     </div>
-</article>
+    </article>
+</div>

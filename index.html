@@ -4,17 +4,33 @@ title: آرمان بورخانی
 
 ---
 {% for post in site.posts %}
-<article>
-    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+<article class="post">
+  <div class="container">
+    <h2 class="post-title">
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </h2>
     <div class="post-info">
-        <ul>
-            <li><i class="far fa-user"></i><span>{{ post.author }}</span></li>
-            <li><i class="far fa-clock"></i><span>{{ post.date | jdate: "%d %b %Y" }}</span></li>
-        </ul>
+      <ul>
+        <li>
+          <i class="far fa-calendar-alt"></i>
+          <span>{{ post.date | jdate: "%d %b %Y" }}</span>
+        </li>
+        <li> 
+          <i class="far fa-clock"></i>
+          <span>
+            {% assign words = post.content | number_of_words %}
+            {% if words < 360 %}
+            1 دقیقه مطالعه
+            {% else %}
+            {{ words | divided_by:180 }} دقیقه مطالعه
+            {% endif %}
+          </span>
+        </li>
+      </ul>
     </div>
     <div class="post-excerpt">
-        {{ post.excerpt }}
+      {{ post.excerpt }}
     </div>
-    <div class="continue"><a href="{{ post.url }}">ادامه مطلب</a></div>
+  </div>
 </article>
 {% endfor %}
