@@ -3,6 +3,12 @@ markdown: kramdown
 kramdown:
    syntax_highlighter_opts:
       disable : true
+title: آرمان بورخانی
+description: من یک توسعه دهنده سمت کاربر وب هستم و درمورد تجربیاتم می نویسم
+lang: fa
+twitter:
+  username: arman_d_b
+  card: summary
 favicon: assets/images/myicon.png
 repository: arman-borkhani/armanb.ir
 github:
