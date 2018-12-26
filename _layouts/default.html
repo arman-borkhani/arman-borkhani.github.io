@@ -25,7 +25,18 @@
     <div class="posts-wrapper">
       {{ content }}
     </div>
-     {% include footer.html %}
+    <footer class="footer">
+        <p class="my-3">برای تماس با من از ایمیل زیر استفاده کنید</p>
+        <p class="my-3">armanborkhani@gmail.com</p>
+        <ul class="social-logo-list my-3">
+          <li>
+            <a href="https://github.com/arman-borkhani" class="social-icon"><i class="fab fa-github" ></i></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/arman_d_b" class="social-icon"><i class="fab fa-twitter"></i></a>
+          </li>
+        </ul>
+      </footer>
     <script src={{ "/assets/js/prism.js" | absolute_url }}></script>
   </body>
 </html>
