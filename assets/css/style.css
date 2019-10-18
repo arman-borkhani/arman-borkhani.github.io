@@ -65,7 +65,9 @@
     line-height: 1.6;
     border-bottom: 1px solid #eee;
   }
-  
+  .post-title {
+    font-weight: 400;
+}
   .post:last-child {
     border-bottom: 0;
   }
