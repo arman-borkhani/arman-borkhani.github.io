@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Vazir";
+
+  src: url("/assets/fonts/Vazir.ttf") format("truetype"),
+    url("/assets/fonts/Vazir.woff") format("woff"),
+    url("/assets/fonts/Vazir.woff2") format("woff2");
+}
 
 /* TAG SELECTORS */
 *{
@@ -10,8 +17,10 @@
   body {
     background-color: #ffffff;
     color: #222;
-    font-family: Tahoma, Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-family: Vazir, Tahoma ,sans-serif;
     font-size: 16px;
+    background: url(/assets/images/bg.jpg) #fff;
+    background-size: 300px 300px;
    
   }
   
@@ -35,10 +44,9 @@
   a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
   
   .header {
-    padding:1em .5em;
+    padding:1em 0;
     overflow: hidden;
     border-bottom: 1px solid #eee;
-    text-align: center;
     min-height: 70px;
   }
   
@@ -48,15 +56,13 @@
   }
   
   .main-heading {
-    font-size: 16px;
-    color: white;
+    font-size: 18px;
     padding: .75em;
     border: 0;
-    display: table;
     margin: 3em auto;
-    background: rgb(108, 196, 187);
     font-weight: bold;
-    vertical-align: center;
+    text-align: right;
+    color: #333;
     display: none;
   }
   
@@ -90,6 +96,14 @@
   
   .post-info {
     font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .post-info_item {
+    display: flex;
+    margin-left: 15px;
+    margin-bottom: 10px;
   }
   
   .post-info span {
@@ -103,16 +117,17 @@
     padding: 3em;
   }
   
-  .social-icon {
-    font-size: 28px;
-    color: rgb(108, 196, 187);
+  .social-logo-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .article {
     font-size: 16px;
     margin-top: 2em;
     line-height: 1.8;
-    font-family:Tahoma, Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-family: Vazir, Tahoma ,sans-serif;
     overflow: hidden;
     padding: 1em 0 4em;
   }
@@ -135,4 +150,27 @@
   .full-width {
     width:100% !important;
     height:auto !important;
+  }
+
+  .i-calendar,
+  .i-clock {
+    width: 16px;
+    height: 16px;
+  }
+
+  .i-github {
+    width: 24px;
+    height: 24px;
+  }
+
+  .i-twitter {
+    width: 28px;
+    height: 28px;
+  }
+
+  .home-link {
+    display: flex;
+    flex-direction: column;
+    max-width: 77px;
+    align-items: center;
   }

@@ -32,22 +32,22 @@ title: ساخت اسلایدر با استفاده از پلاگین Owl Carouse
 ## نصب و راه اندازی
 
 پلاگین را از صفحه اصلی سایت دانلود کنید؛ فایلی که دانلود کردید یه پوشه به نام dist داره که ساختار و محتواش به شکل زیر است.
-
-    owlcarousel/
-    ├── assets/
-    │   ├── owl.carousel.css
-    │   ├── owl.carousel.min.css
-    │   ├── owl.theme.default.css
-    │   ├── owl.theme.default.min.css
-    │   ├── owl.theme.green.css
-    │   ├── owl.theme.green.min.css
-    │   └── owl.video.play.png
-    │
-    ├── owl.carousel.js
-    ├── owl.carousel.min.js
-    ├── LICENSE-MIT
-    └── README.md
-
+~~~markup
+owlcarousel/
+├── assets/
+│   ├── owl.carousel.css
+│   ├── owl.carousel.min.css
+│   ├── owl.theme.default.css
+│   ├── owl.theme.default.min.css
+│   ├── owl.theme.green.css
+│   ├── owl.theme.green.min.css
+│   └── owl.video.play.png
+│
+├── owl.carousel.js
+├── owl.carousel.min.js
+├── LICENSE-MIT
+└── README.md
+~~~
 ابتدا باید فایل های owl.carousel.min.css و owl.theme.default.min.css را به سندتون اضافه کنید.
 
 ~~~markup

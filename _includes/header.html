@@ -1,9 +1,14 @@
 
 <header class="header">
-  <a href="/">
-    <img src="/assets/images/main-icon.png" class="main-icon" alt="armanb.ir">
-  </a>
-  <h1 class="main-heading" {% if page.url == "/" %}style="display: table;"{% endif %}>
-    من یک توسعه دهنده سمت کاربر وب هستم و از تجربیاتم می نویسم
-  </h1>
+  <div class="container">
+	  <a class="home-link" href="/" {% if page.url == "/" %}style="display: none;"{% endif %}>
+	  	<svg id="i-home" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+    		<path d="M12 20 L12 30 4 30 4 12 16 2 28 12 28 30 20 30 20 20 Z" />
+			</svg>
+	    صفحه اصلی
+	  </a>
+	  <h1 class="main-heading" {% if page.url == "/" %}style="display: block;"{% endif %}>
+	    آرمان بورخانی هستم ، توسعه دهنده سمت کاربر وب (front-end developer) و از تجربیاتم می نویسم %💻 📚 🌍
+	  </h1>  	
+  </div>
 </header>

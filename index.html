@@ -10,23 +10,26 @@ title: آرمان بورخانی
       <a href="{{ post.url }}">{{ post.title }}</a>
     </h2>
     <div class="post-info">
-      <ul>
-        <li>
-          <i class="far fa-calendar-alt"></i>
-          <span>{{ post.date | jdate: "%d %b %Y" }}</span>
-        </li>
-        <li> 
-          <i class="far fa-clock"></i>
-          <span>
-            {% assign words = post.content | number_of_words %}
-            {% if words < 360 %}
-            1 دقیقه مطالعه
-            {% else %}
-            {{ words | divided_by:180 }} دقیقه مطالعه
-            {% endif %}
-          </span>
-        </li>
-      </ul>
+      <div class="post-info_item">
+        <svg id="i-calendar" class="i-calendar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+          <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9" />
+        </svg>
+        <span>{{ post.date | jdate: "%d %b %Y" }}</span>
+      </div>
+      <div class="post-info_item">
+        <svg id="i-clock" class="i-clock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+          <circle cx="16" cy="16" r="14" />
+          <path d="M16 8 L16 16 20 20" />
+        </svg>                 
+        <span>
+          {% assign words = post.content | number_of_words %}
+          {% if words < 360 %}
+          1 دقیقه مطالعه
+          {% else %}
+          {{ words | divided_by:180 }} دقیقه مطالعه
+          {% endif %}
+        </span>
+      </div>
     </div>
     <div class="post-excerpt">
       {{ post.excerpt }}
