@@ -60,7 +60,7 @@
     padding: .75em;
     border: 0;
     margin: 3em auto;
-    font-weight: bold;
+    font-weight: normal;
     text-align: right;
     color: #333;
     display: none;
@@ -158,7 +158,8 @@
     height: 16px;
   }
 
-  .i-github {
+  .i-github,
+  .i-codepen{
     width: 24px;
     height: 24px;
   }
