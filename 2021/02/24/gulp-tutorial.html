@@ -88,15 +88,13 @@
 
 <p>در ادامه یاد می‌گیرید چطور با استفاده از گالپ موارد زیر را انجام دهید و با  مقدمات و شالوده این پلاگین آشنا خواهید شد.</p>
 
-<p>راه اندازی وب سرور بصورت Local</p>
-
-<p>Reload مرورگر بصورت خودکار بعد از انجام تغییرات در ویرایشگر</p>
-
-<p>تبدیل فایل‌های SASS به CSS</p>
-
-<p>الحاق و فشرده سازی فایل های CSS و JS</p>
-
-<p>بهینه سازی تصاویر</p>
+<ul>
+  <li>راه اندازی وب سرور بصورت Local</li>
+  <li>Reload مرورگر بصورت خودکار بعد از انجام تغییرات در ویرایشگر</li>
+  <li>تبدیل فایل‌های SASS به CSS</li>
+  <li>الحاق و فشرده سازی فایل های CSS و JS</li>
+  <li>بهینه سازی تصاویر</li>
+</ul>
 
 <h2 id="نصب-گالپ">نصب گالپ</h2>
 
@@ -221,7 +219,7 @@ exports.default = hello;
 var sass = require('gulp-sass');
 </code></pre>
 
-<p>task ی که در بخش قبلی بعنوان نمونه نوشتید را در نظر بگیرید ، کافیه به جای aGulpPlugin  پلاگین sass را جایگزین کنید و نام تابع را عوض کنید.</p>
+<p>task ی که در بخش قبلی بعنوان نمونه نوشتید را در نظر بگیرید ، کافیست به جای aGulpPlugin  پلاگین sass را جایگزین کنید و نام تابع را عوض کنید.</p>
 
 <pre><code class="language-javascript">function sassTask(){
   return gulp.src('source-files')
@@ -229,7 +227,7 @@ var sass = require('gulp-sass');
     .pipe(gulp.dest('destination'))
 };
 </code></pre>
-<p>حالا کافیه فایل ورودی و محل ذخیره فایل نهایی را مشخص کنید و تابع را export کنید؛ در پوشه scss یک فایل جدید بنام styles.scss بسازید ، این فایل ورودی تابع gulp.src خواهد بود و فایل styles.css نهایی هم باید در مسیر ‘app/css’ قرار گیرد.</p>
+<p>حالا کافیست فایل ورودی و محل ذخیره فایل نهایی را مشخص کنید و تابع را export کنید؛ در پوشه scss یک فایل جدید بنام styles.scss بسازید ، این فایل ورودی تابع gulp.src خواهد بود و فایل styles.css نهایی هم باید در مسیر ‘app/css’ قرار گیرد.</p>
 
 <pre><code class="language-javascript">function sassTask(){
   return gulp.src('app/scss/styles.scss')
@@ -282,7 +280,7 @@ body .test {
 }
 </code></pre>
 
-<p>هر فایل SASS که در مسیر ‘app/css’ وجود داشته باشه بصورت اتوماتیک به وسیله تسک gulpSass به فایل css تبدیل خواهد شد ، برای نمونه اگر یک فایل به نام print.scss ایجاد و بعد gulpSass را اجرا کنید ، فایلی مشابه با بصورت css در مسیر ‘app/css’ ساخته می شود.</p>
+<p>هر فایل SASS که در مسیر ‘app/css’ وجود داشته باشه بصورت خودکار به وسیله تسک gulpSass به فایل css تبدیل خواهد شد ، برای نمونه اگر یک فایل به نام print.scss ایجاد و بعد gulpSass را اجرا کنید ، فایلی مشابه بصورت css در مسیر ‘app/css’ ساخته می شود.</p>
 
 <p>تا اینجا توانستید با استفاده از دستور <code>gulp sass</code> همه فایل های SASS را به css تبدیل کنید، اما باید بعد از هر تغییری که در فایل های SASS ایجاد کردید دستور <code>gulp sass</code> را اجرا کنید تا فایل ها تبدیل شوند ؛ برای اینکه  بعد از انجام تغییرات دستور <code>gulp sass</code> بصورت خودکار اجرا شود می توانید از متد watch استفاده کنید.</p>
 
@@ -352,7 +350,7 @@ exports.watch = watchTask;
 
 <p>تا اینجا تنظیمات لازم browser sync انجام شده و برای اینکه مرورگر بصورت خودکار Reload شود، باید تسک های watchTask و browserSyncTask را بصورت همزمان اجرا کنید ؛ برای انجام این کار می توانید دوتا خط فرمان باز کنید و دستورات <code>run watchTask</code> و <code>run browserSyncTask</code> را بصورت جدا در هر کدام از پنجره های خط فرمان اجرا کنید یا اینکه از متدهای Gulp استفاده کنید.</p>
 
-<p>Gulp متدی به نام parallel دارد که با استفاده از آن می توانید چند task را بصورت همزمان اجرا کنید و کافیه برای اجرای watchTask و browserSyncTask بصورت همزمان بشکل زیر عمل کنید.</p>
+<p>Gulp متدی به نام parallel دارد که با استفاده از آن می توانید چند task را بصورت همزمان اجرا کنید و کافیست برای اجرای watchTask و browserSyncTask بصورت همزمان بشکل زیر عمل کنید.</p>
 
 <pre><code class="language-javascript">exports.start = gulp.parallel(browserSyncTask, sassTask , watchTask);
 </code></pre>
@@ -598,7 +596,7 @@ var uglify = require('gulp-uglify'),
 
 <p>در ادامه می توانید با استفاده از unCSS کدهای بلااستفاده را حذف کنید ، از sourcemap برای ساده کردن فرایند دیباگ استفاده کنید، با استفاده از Babel کدهای جاوا اسکریپت را با استاندار ES6 بنویسید یا کدهای Typescript را کامپایل و به جاوا اسکریپت تبدیل کنید و …</p>
 
-<p>کدهای نوشته شده را می توانید بصورت کامل در <a href="https://github.com/arman-borkhani/git-workflow">مخزن گیتهابی</a> که برای این پروژه ساخته ام مشاهده کنید ؛</p>
+<p>کدهای نوشته شده را می توانید بصورت کامل در <a href="https://github.com/arman-borkhani/git-workflow">مخزن گیتهابی</a>که برای این پروژه ساخته ام مشاهده کنید .</p>
 
 <p><a href="https://css-tricks.com/gulp-for-beginners/">منبع اصلی</a></p>
 
