@@ -449,17 +449,6 @@ var plugins = [
 ~~~javascript 
 .pipe(gulpIf('*.css', postcss(plugins)))
 ~~~
-برای اینکه بتوانید فایل index.html را هم فشرده کنید از پلاگین [gulp-htmlmin](https://www.npmjs.com/package/gulp-htmlmin) کمک بگیرید.
-
-~~~bash
-npm install gulp-htmlmin
-~~~
-
-و کد زیر را به تابع optTask اضافه کنید.
-
-~~~javascript
-.pipe(htmlmin({ collapseWhitespace: true }))
-~~~
 
 در انتها تابع optTask باید بشکل زیر باشد.
 
@@ -471,7 +460,6 @@ function optTask(){
   ];
   return gulp.src('app/*.html')
     .pipe(useref())
-    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulpIf('*.js', uglify()))
     .pipe(gulpIf('*.css', postcss(plugins)))
     .pipe(gulp.dest('dist'))
